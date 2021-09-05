@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://Camera.gd" type="Script" id=3]
+[ext_resource path="res://Camera3.gd" type="Script" id=4]
+
+[node name="Main" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Viewports" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer1" type="ViewportContainer" parent="Viewports"]
+margin_right = 510.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport1" type="Viewport" parent="Viewports/ViewportContainer1"]
+size = Vector2( 510, 600 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera1" type="Camera2D" parent="Viewports/ViewportContainer1/Viewport1"]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+script = ExtResource( 3 )
+
+[node name="ViewportContainer2" type="ViewportContainer" parent="Viewports"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport2" type="Viewport" parent="Viewports/ViewportContainer2"]
+size = Vector2( 510, 600 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera2" type="Camera2D" parent="Viewports/ViewportContainer2/Viewport2"]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+script = ExtResource( 3 )
+
+[node name="Minimap" type="ViewportContainer" parent="."]
+anchor_left = 0.4
+anchor_top = 0.75
+anchor_right = 0.6
+anchor_bottom = 0.98
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="Minimap"]
+size = Vector2( 204, 138 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera3" type="Camera2D" parent="Minimap/Viewport"]
+current = true
+zoom = Vector2( 8, 8 )
+script = ExtResource( 4 )
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="StateCheckTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="StateCheckTimer" to="." method="_on_StateCheckTimer_timeout"]
