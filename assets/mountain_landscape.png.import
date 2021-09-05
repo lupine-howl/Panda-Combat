@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kisspng-sprite-elf-clip-art-5b3814526026d2.3111543315304018743939.png-86f3786e927196c3f25507871fe88eaf.stex"
+path="res://.import/mountain_landscape.png-8feab219a9d6602d381319f1b19387f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kisspng-sprite-elf-clip-art-5b3814526026d2.3111543315304018743939.png"
-dest_files=[ "res://.import/kisspng-sprite-elf-clip-art-5b3814526026d2.3111543315304018743939.png-86f3786e927196c3f25507871fe88eaf.stex" ]
+source_file="res://assets/mountain_landscape.png"
+dest_files=[ "res://.import/mountain_landscape.png-8feab219a9d6602d381319f1b19387f5.stex" ]
 
 [params]
 

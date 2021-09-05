@@ -4,8 +4,8 @@
 [ext_resource path="res://SafeArea.gd" type="Script" id=2]
 [ext_resource path="res://Enemy1.gd" type="Script" id=3]
 [ext_resource path="res://HealthBar.gd" type="Script" id=4]
-[ext_resource path="res://minotaur-red-NESW.png" type="Texture" id=5]
-[ext_resource path="res://kisspng-sprite-elf-clip-art-5b3814526026d2.3111543315304018743939.png" type="Texture" id=6]
+[ext_resource path="res://assets/minotaur-red-NESW.png" type="Texture" id=5]
+[ext_resource path="res://assets/kisspng-sprite-elf-clip-art-5b3814526026d2.3111543315304018743939.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 64 )

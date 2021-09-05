@@ -9,6 +9,7 @@ onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
 onready var minimap = $Minimap/Viewport
 var panda = preload("res://Panda.tscn")
 var minotaur = preload("res://Minotaur.tscn")
+var squire = preload("res://Squire.tscn")
 var world
 var levels = ["Level1", "Level2", "Level3"]
 var current_level = 0
@@ -107,7 +108,7 @@ func next_level():
 	set_level(current_level)
 	
 func set_level(level_num):
-	var level = load("res://"+levels[level_num]+".tscn").instance()
+	var level = load("res://levels/"+levels[level_num]+".tscn").instance()
 	var start = level.find_node("Start")
 	var character_node = level.find_node("PlayerCharacters")
 	var i = 0
@@ -137,8 +138,8 @@ func set_level(level_num):
 func _ready():
 	player_characters[0].push_back(panda.instance())
 	player_characters[0].push_back(panda.instance())
-	player_characters[1].push_back(minotaur.instance())
-	player_characters[1].push_back(minotaur.instance())
+	player_characters[1].push_back(squire.instance())
+	player_characters[1].push_back(squire.instance())
 	set_level(0)
 	select_next_player_character(0)
 	select_next_player_character(1)
