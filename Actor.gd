@@ -77,7 +77,7 @@ func _ready():
 func set_animation(new_animation):
 	if(new_animation!=current_animation):
 		current_animation = new_animation
-		$AnimationPlayer.play(new_animation)
+		$Sprite.play(new_animation)
 	pass
 
 		

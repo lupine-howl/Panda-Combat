@@ -7,9 +7,9 @@ extends Node
 onready var viewport1 = $Viewports/ViewportContainer1/Viewport1
 onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
 onready var minimap = $Minimap/Viewport
-var panda = preload("res://Panda.tscn")
-var minotaur = preload("res://Minotaur.tscn")
-var squire = preload("res://Squire.tscn")
+var panda = preload("res://characters/Panda.tscn")
+var minotaur = preload("res://characters/Minotaur.tscn")
+var squire = preload("res://characters/Squire.tscn")
 var world
 var levels = ["Level1", "Level2", "Level3"]
 var current_level = 0
